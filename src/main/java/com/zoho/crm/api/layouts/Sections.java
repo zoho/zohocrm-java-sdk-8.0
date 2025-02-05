@@ -10,6 +10,8 @@ public class Sections implements Model
 
 	private Integer sequenceNumber;
 
+	private ActionsAllowed actionsAllowed;
+
 	private Boolean issubformsection;
 
 	private String tabTraversal;
@@ -76,6 +78,28 @@ public class Sections implements Model
 		 this.sequenceNumber = sequenceNumber;
 
 		 this.keyModified.put("sequence_number", 1);
+
+	}
+
+	/**
+	 * The method to get the value of actionsAllowed
+	 * @return An instance of ActionsAllowed
+	 */
+	public ActionsAllowed getActionsAllowed()
+	{
+		return  this.actionsAllowed;
+
+	}
+
+	/**
+	 * The method to set the value to actionsAllowed
+	 * @param actionsAllowed An instance of ActionsAllowed
+	 */
+	public void setActionsAllowed(ActionsAllowed actionsAllowed)
+	{
+		 this.actionsAllowed = actionsAllowed;
+
+		 this.keyModified.put("actions_allowed", 1);
 
 	}
 

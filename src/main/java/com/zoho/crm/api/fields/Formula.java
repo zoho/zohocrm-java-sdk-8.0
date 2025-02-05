@@ -17,8 +17,6 @@ public class Formula implements Model
 
 	private String stopComputeExpression;
 
-	private String expression2;
-
 	private HashMap<String, Integer> keyModified = new HashMap<String, Integer>();
 
 
@@ -151,28 +149,6 @@ public class Formula implements Model
 		 this.stopComputeExpression = stopComputeExpression;
 
 		 this.keyModified.put("stop_compute_expression", 1);
-
-	}
-
-	/**
-	 * The method to get the value of expression2
-	 * @return A String representing the expression2
-	 */
-	public String getExpression2()
-	{
-		return  this.expression2;
-
-	}
-
-	/**
-	 * The method to set the value to expression2
-	 * @param expression2 A String representing the expression2
-	 */
-	public void setExpression2(String expression2)
-	{
-		 this.expression2 = expression2;
-
-		 this.keyModified.put("expression", 1);
 
 	}
 

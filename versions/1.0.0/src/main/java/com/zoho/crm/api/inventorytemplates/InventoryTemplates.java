@@ -5,7 +5,7 @@ import com.zoho.crm.api.util.Model;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 
-public class InventoryTemplates implements Template, Model
+public class InventoryTemplates implements Model, Template
 {
 	private OffsetDateTime createdTime;
 

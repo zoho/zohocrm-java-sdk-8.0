@@ -13,6 +13,8 @@ public class MinifiedModule implements Model
 
 	private String module;
 
+	private Boolean crypt;
+
 	private HashMap<String, Integer> keyModified = new HashMap<String, Integer>();
 
 
@@ -101,6 +103,28 @@ public class MinifiedModule implements Model
 		 this.module = module;
 
 		 this.keyModified.put("module", 1);
+
+	}
+
+	/**
+	 * The method to get the value of crypt
+	 * @return A Boolean representing the crypt
+	 */
+	public Boolean getCrypt()
+	{
+		return  this.crypt;
+
+	}
+
+	/**
+	 * The method to set the value to crypt
+	 * @param crypt A Boolean representing the crypt
+	 */
+	public void setCrypt(Boolean crypt)
+	{
+		 this.crypt = crypt;
+
+		 this.keyModified.put("crypt", 1);
 
 	}
 

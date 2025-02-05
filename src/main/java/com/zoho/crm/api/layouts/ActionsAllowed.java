@@ -19,6 +19,16 @@ public class ActionsAllowed implements Model
 
 	private Boolean setLayoutPermissions;
 
+	private Boolean addField;
+
+	private Boolean changeTabTraversal;
+
+	private Boolean reorder;
+
+	private Boolean removeField;
+
+	private Boolean changeColumnCount;
+
 	private HashMap<String, Integer> keyModified = new HashMap<String, Integer>();
 
 
@@ -173,6 +183,116 @@ public class ActionsAllowed implements Model
 		 this.setLayoutPermissions = setLayoutPermissions;
 
 		 this.keyModified.put("set_layout_permissions", 1);
+
+	}
+
+	/**
+	 * The method to get the value of addField
+	 * @return A Boolean representing the addField
+	 */
+	public Boolean getAddField()
+	{
+		return  this.addField;
+
+	}
+
+	/**
+	 * The method to set the value to addField
+	 * @param addField A Boolean representing the addField
+	 */
+	public void setAddField(Boolean addField)
+	{
+		 this.addField = addField;
+
+		 this.keyModified.put("add_field", 1);
+
+	}
+
+	/**
+	 * The method to get the value of changeTabTraversal
+	 * @return A Boolean representing the changeTabTraversal
+	 */
+	public Boolean getChangeTabTraversal()
+	{
+		return  this.changeTabTraversal;
+
+	}
+
+	/**
+	 * The method to set the value to changeTabTraversal
+	 * @param changeTabTraversal A Boolean representing the changeTabTraversal
+	 */
+	public void setChangeTabTraversal(Boolean changeTabTraversal)
+	{
+		 this.changeTabTraversal = changeTabTraversal;
+
+		 this.keyModified.put("change_tab_traversal", 1);
+
+	}
+
+	/**
+	 * The method to get the value of reorder
+	 * @return A Boolean representing the reorder
+	 */
+	public Boolean getReorder()
+	{
+		return  this.reorder;
+
+	}
+
+	/**
+	 * The method to set the value to reorder
+	 * @param reorder A Boolean representing the reorder
+	 */
+	public void setReorder(Boolean reorder)
+	{
+		 this.reorder = reorder;
+
+		 this.keyModified.put("reorder", 1);
+
+	}
+
+	/**
+	 * The method to get the value of removeField
+	 * @return A Boolean representing the removeField
+	 */
+	public Boolean getRemoveField()
+	{
+		return  this.removeField;
+
+	}
+
+	/**
+	 * The method to set the value to removeField
+	 * @param removeField A Boolean representing the removeField
+	 */
+	public void setRemoveField(Boolean removeField)
+	{
+		 this.removeField = removeField;
+
+		 this.keyModified.put("remove_field", 1);
+
+	}
+
+	/**
+	 * The method to get the value of changeColumnCount
+	 * @return A Boolean representing the changeColumnCount
+	 */
+	public Boolean getChangeColumnCount()
+	{
+		return  this.changeColumnCount;
+
+	}
+
+	/**
+	 * The method to set the value to changeColumnCount
+	 * @param changeColumnCount A Boolean representing the changeColumnCount
+	 */
+	public void setChangeColumnCount(Boolean changeColumnCount)
+	{
+		 this.changeColumnCount = changeColumnCount;
+
+		 this.keyModified.put("change_column_count", 1);
 
 	}
 

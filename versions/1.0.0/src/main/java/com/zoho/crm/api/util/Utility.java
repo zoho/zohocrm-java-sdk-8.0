@@ -989,7 +989,7 @@ public class Utility
 		String[] fieldAPINamesInteger = new String[] { "integer" };
 		String[] fieldAPINamesBoolean = new String[] { "boolean" };
 		String[] fieldAPINamesLong = new String[] { "long", "bigint" };
-		String[] fieldAPINamesDouble = new String[] { "double", "percent", "lookup", "currency" };
+		String[] fieldAPINamesDouble = new String[] { "double", "percent", "currency" };
 		String[] fieldAPINamesFieldFile = new String[] { "fileupload" };
 		String[] fieldAPINamesDateTime = new String[] { "datetime", "event_reminder" };
 		String[] fieldAPINamesDate = new String[] { "date" };
