@@ -10,7 +10,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.List;
 
-public class EmailTemplate extends InventoryTemplates implements Model, Template
+public class EmailTemplate extends InventoryTemplates implements Template, Model
 {
 	private List<Attachment> attachments;
 

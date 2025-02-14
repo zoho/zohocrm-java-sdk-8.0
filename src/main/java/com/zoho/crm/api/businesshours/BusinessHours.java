@@ -21,6 +21,8 @@ public class BusinessHours implements Model
 
 	private List<BreakHoursCustomTiming> customTiming;
 
+	private String timezone;
+
 	private HashMap<String, Integer> keyModified = new HashMap<String, Integer>();
 
 
@@ -175,6 +177,28 @@ public class BusinessHours implements Model
 		 this.customTiming = customTiming;
 
 		 this.keyModified.put("custom_timing", 1);
+
+	}
+
+	/**
+	 * The method to get the value of timezone
+	 * @return A String representing the timezone
+	 */
+	public String getTimezone()
+	{
+		return  this.timezone;
+
+	}
+
+	/**
+	 * The method to set the value to timezone
+	 * @param timezone A String representing the timezone
+	 */
+	public void setTimezone(String timezone)
+	{
+		 this.timezone = timezone;
+
+		 this.keyModified.put("timezone", 1);
 
 	}
 
