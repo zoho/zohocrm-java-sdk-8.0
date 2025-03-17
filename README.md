@@ -25,6 +25,10 @@ License
 
 ## Latest Version
 
+- [2.0.0](/versions/2.0.0/README.md)
+    - New fields have been added to the History Tracking Fields API. 
+    - Fixed the issue with the inventory mass conversion status API.
+
 - [1.0.0](/versions/1.0.0/README.md)
 
     - Java SDK upgraded to support v8 APIs.
@@ -44,10 +48,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-8.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/1.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-8-0/1.0.0/zohocrm-java-sdk-8-0-1.0.0.jar)
+- [Gradle](/versions/2.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-8-0/2.0.0/zohocrm-java-sdk-8-0-2.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/releases/tag/1.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/releases/tag/2.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -60,7 +64,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-8-0</artifactId>
-            <version>1.0.0</version>
+            <version>2.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -80,4 +84,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/1.0.0/README.md).
+For more details, kindly refer [here](/versions/2.0.0/README.md).
