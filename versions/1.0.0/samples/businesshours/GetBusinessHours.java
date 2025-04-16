@@ -1,0 +1,135 @@
+package samples.businesshours;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+import com.zoho.api.authenticator.OAuthToken;
+import com.zoho.api.authenticator.Token;
+
+import com.zoho.crm.api.Initializer;
+import com.zoho.crm.api.businesshours.BusinessHours;
+import com.zoho.crm.api.businesshours.BusinessHoursOperations;
+import com.zoho.crm.api.businesshours.ResponseHandler;
+import com.zoho.crm.api.businesshours.ResponseWrapper;
+import com.zoho.crm.api.businesshours.APIException;
+import com.zoho.crm.api.businesshours.BreakHoursCustomTiming;
+import com.zoho.crm.api.dc.USDataCenter;
+import com.zoho.crm.api.dc.DataCenter.Environment;
+import com.zoho.crm.api.util.APIResponse;
+import com.zoho.crm.api.util.Choice;
+import com.zoho.crm.api.util.Model;
+
+public class GetBusinessHours
+{
+	public static void getBusinessHours() throws Exception
+	{
+		BusinessHoursOperations businessHoursOperations = new BusinessHoursOperations("4402480020813");
+		APIResponse<ResponseHandler> response = businessHoursOperations.getBusinessHours();
+		if (response != null)
+		{
+			System.out.println("Status Code: " + response.getStatusCode());
+			if (Arrays.asList(204, 304).contains(response.getStatusCode()))
+			{
+				System.out.println(response.getStatusCode() == 204 ? "No Content" : "Not Modified");
+				return;
+			}
+			if (response.isExpected())
+			{
+				ResponseHandler responseObject = (ResponseHandler) response.getObject();
+				if (responseObject instanceof ResponseWrapper)
+				{
+					ResponseWrapper responseWrapper = (ResponseWrapper) responseObject;
+					BusinessHours businessHours = responseWrapper.getBusinessHours();
+					List<Choice<String>> businessdays = businessHours.getBusinessDays();
+					if (businessdays != null)
+					{
+						System.out.println("businessdays :");
+						for (Choice<String> businessday : businessdays)
+						{
+							System.out.println(businessday.getValue());
+						}
+					}
+					else
+					{
+						System.out.println("businessdays : null");
+					}
+					List<BreakHoursCustomTiming> customtiming = businessHours.getCustomTiming();
+					if (customtiming != null)
+					{
+						System.out.println("custom_timing :");
+						for (BreakHoursCustomTiming bhct : customtiming)
+						{
+							System.out.println("days : " + bhct.getDays().getValue());
+							List<String> businessTimings = bhct.getBusinessTiming();
+							for (String businessTiming : businessTimings)
+							{
+								System.out.println("businesstimings : " + businessTiming);
+							}
+						}
+					}
+					else
+					{
+						System.out.println("customtiming : null");
+					}
+					List<String> dailyTimings = businessHours.getDailyTiming();
+					if (dailyTimings != null)
+					{
+						System.out.println("daily_timings : ");
+						for (String dailyTiming : dailyTimings)
+						{
+							System.out.println(dailyTiming);
+						}
+					}
+					else
+					{
+						System.out.println("daily_timings : null");
+					}
+					System.out.println("week_starts_on : " + businessHours.getWeekStartsOn().getValue());
+					System.out.println("same_as_everyday : " + businessHours.getSameAsEveryday());
+					System.out.println("businesshours_id : " + businessHours.getId());
+					System.out.println("businesshours_type : " + businessHours.getType().getValue());
+				}
+				else if (responseObject instanceof APIException)
+				{
+					APIException exception = (APIException) responseObject;
+					System.out.println("Status: " + exception.getStatus().getValue());
+					System.out.println("Code: " + exception.getCode().getValue());
+					System.out.println("Details: ");
+					for (Map.Entry<String, Object> entry : exception.getDetails().entrySet())
+					{
+						System.out.println(entry.getKey() + ": " + entry.getValue());
+					}
+					System.out.println("Message: " + exception.getMessage());
+				}
+			}
+			else
+			{
+				Model responseObject = response.getModel();
+				Class<? extends Model> clas = responseObject.getClass();
+				java.lang.reflect.Field[] fields = clas.getDeclaredFields();
+				for (java.lang.reflect.Field field : fields)
+				{
+					field.setAccessible(true);
+					System.out.println(field.getName() + ":" + field.get(responseObject));
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args)
+	{
+		try
+		{
+			Environment environment = USDataCenter.PRODUCTION;
+			Token token = new OAuthToken.Builder().clientID("Client_Id").clientSecret("Client_Secret").refreshToken("Refresh_Token").redirectURL("Redirect_URL").build();
+			new Initializer.Builder().environment(environment).token(token).initialize();
+			getBusinessHours();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
