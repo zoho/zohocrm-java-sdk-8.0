@@ -47,7 +47,7 @@ public class MultiThread extends Thread
 	{
 		Logger loggerInstance = new Logger.Builder().level(Logger.Levels.ALL).filePath("/Users/sdk.log").build();
 		Environment env = USDataCenter.PRODUCTION;
-		Token token1 = new OAuthToken.Builder().clientID("1000.xxxx").clientSecret("xxxxx").refreshToken("1000.xxx.xxx").build();
+		Token token1 = new OAuthToken.Builder().clientID("Client_ID").clientSecret("xxxxx").refreshToken("Refresh_Token").build();
 		new Initializer.Builder().environment(env).token(token1).logger(loggerInstance).initialize();
 		MultiThread mtsu = new MultiThread("Deals");
 		mtsu.start();

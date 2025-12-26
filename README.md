@@ -24,6 +24,36 @@ License
     limitations under the License.
 
 ## Latest Version
+- [4.0.0](/versions/4.0.0/README.md)
+    - Updated dependencies to their latest versions.
+    - Improved error handling and logging mechanisms.
+    - Handled SDK utils and API connectors.
+    - Improved DB store query handling.
+    - Fixed an issue with the Blueprint update API response.
+    - Blueprint Field class `validationRule` field datatype changed (String to Object).
+    - BulkWrite `BodyWrapper` class `fileType` field datatype changed (Choice to String).
+    - BulkWrite `JobDetail` class `fileType` field datatype changed (Choice to String).
+    - BulkRead `Query` class `fileType` field datatype changed (Choice to String).
+    - Modules `GetModulesParam` class `STATUS` field datatype changed (Choice to String).
+    - Added new `trigger` field in Notes `BodyWrapper` class.
+    - Notifications class `deleteEvents` field datatype changed (Choice to String).
+    - Modules `DeleteNotificationParam` class `CHANNEL_IDS` field datatype changed (Long to String).
+    - Profiles and `MinifiedProfile` class `delete` field datatype changed (Boolean to `Delete` class).
+    - Added new `applyFeatureExecution`, `applyValidationRule`, `applyFunctionValidationRule`, and `skipFeatureExecution` fields in Record `BodyWrapper` class.
+    - Tags class `colorCode` field datatype changed (Choice to String).
+    - Users `CountWrapper` class `count` field datatype changed (Long to Integer).
+    - Users `GetUsersParam` class `TYPE` field datatype changed (Choice to String).
+    - Webforms `Abtesting` class `id` field datatype changed (Long to String).
+    - Webforms `AcknowledgeVisitor` class `templateId` field datatype changed (Long to String).
+    - Webforms `AssignmentRule` class `id` field datatype changed (Long to String).
+    - Webforms `Layout` class `id` field datatype changed (Long to String).
+    - Webforms `Module` class `id` field datatype changed (Long to String).
+    - Webforms `Owner` class `id` field datatype changed (Long to String).
+    - Webforms `Tags` class `id` field datatype changed (Long to String).
+    - Webforms `Users` class `id` field datatype changed (Long to String).
+    - Webforms `Users` `acknowledgeVisitor` field datatype changed (AcknowledgeVisitors to AcknowledgeVisitor).
+    - Removed `updateWebForms` method from the `WebformsOperations` class.
+
 - [3.0.0](/versions/3.0.0/README.md)
     - Handled text/plain content-type in Downloader class. 
 
@@ -50,10 +80,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-8.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/3.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-8-0/3.0.0/zohocrm-java-sdk-8-0-3.0.0.jar)
+- [Gradle](/versions/4.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-8-0/4.0.0/zohocrm-java-sdk-8-0-4.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/releases/tag/3.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/releases/tag/4.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -66,7 +96,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-8-0</artifactId>
-            <version>3.0.0</version>
+            <version>4.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -86,4 +116,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/3.0.0/README.md).
+For more details, kindly refer [here](/versions/4.0.0/README.md).

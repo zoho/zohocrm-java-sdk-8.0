@@ -47,7 +47,7 @@ public class SingleThread extends Thread
 	{
 		Environment env = USDataCenter.PRODUCTION;
 		TokenStore tokenstore = new DBStore.Builder().build();
-		Token token1 = new OAuthToken.Builder().clientID("1000.xxxxx").clientSecret("xxx").refreshToken("1000.xxx.xxxx").redirectURL("https://www.zoho.com").build();
+		Token token1 = new OAuthToken.Builder().clientID("Client_ID").clientSecret("xxx").refreshToken("Refresh_Token").redirectURL("https://www.zoho.com").build();
 		new Initializer.Builder().environment(env).token(token1).store(tokenstore).initialize();
 		SingleThread stsu = new SingleThread("Leads");
 		stsu.start();
