@@ -52,12 +52,12 @@ public class MultiThread extends Thread
 	{
 		Environment env = USDataCenter.PRODUCTION;
 		TokenStore tokenstore = new DBStore.Builder().build();
-		Token token1 = new OAuthToken.Builder().clientID("1000.xxx").clientSecret("xx").refreshToken("1000.xxx.xxx").redirectURL("https://www.zoho.com").build();
+		Token token1 = new OAuthToken.Builder().clientID("Client_ID").clientSecret("xx").refreshToken("Refresh_Token").redirectURL("https://www.zoho.com").build();
 		new Initializer.Builder().environment(env).token(token1).store(tokenstore).initialize();
 		MultiThread multiThread = new MultiThread(env, token1, "Students");
 		multiThread.start();
 		Environment environment = USDataCenter.PRODUCTION;
-		Token token2 = new OAuthToken.Builder().clientID("1000.xxx").clientSecret("xxx").refreshToken("1000.xxx.xx").build();
+		Token token2 = new OAuthToken.Builder().clientID("Client_ID").clientSecret("xxx").refreshToken("Refresh_Token").build();
 		multiThread = new MultiThread(environment, token2, "Leads");
 		multiThread.start();
 	}

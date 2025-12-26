@@ -57,12 +57,12 @@ public class SingleThread
 	{
 		Environment env = USDataCenter.PRODUCTION;
 		TokenStore tokenstore = new DBStore.Builder().build();
-		Token token1 = new OAuthToken.Builder().clientID("1000.xxxx").clientSecret("xxx").refreshToken("1000.xxx.xx").redirectURL("https://www.zoho.com").build();
+		Token token1 = new OAuthToken.Builder().clientID("Client_ID").clientSecret("xxx").refreshToken("Refresh_Token").redirectURL("https://www.zoho.com").build();
 		new Initializer.Builder().environment(env).token(token1).store(tokenstore).initialize();
 		SingleThread singleThread = new SingleThread(env, token1, "Students");
 		singleThread.run();
 		Environment environment = USDataCenter.PRODUCTION;
-		Token token2 = new OAuthToken.Builder().clientID("1000.xxxxx").clientSecret("xxxx").refreshToken("1000.xxx.xxx").build();
+		Token token2 = new OAuthToken.Builder().clientID("Client_ID").clientSecret("xxxx").refreshToken("Refresh_Token").build();
 		singleThread = new SingleThread(environment, token2, "Leads");
 		singleThread.run();
 	}
