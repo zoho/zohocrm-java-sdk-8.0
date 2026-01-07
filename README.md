@@ -24,6 +24,9 @@ License
     limitations under the License.
 
 ## Latest Version
+- [5.0.0](/versions/5.0.0/README.md)
+    - Handled content-type is null in CommonAPIHandler class. 
+
 - [4.0.0](/versions/4.0.0/README.md)
     - Updated dependencies to their latest versions.
     - Improved error handling and logging mechanisms.
@@ -80,10 +83,10 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-java-sdk-8.0/
 ## Including the SDK in your project
 You can include the SDK to your project using:
 - Maven
-- [Gradle](/versions/4.0.0/README.md#including-the-sdk-in-your-project)
-- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-8-0/4.0.0/zohocrm-java-sdk-8-0-4.0.0.jar)
+- [Gradle](/versions/5.0.0/README.md#including-the-sdk-in-your-project)
+- [Download SDK jar](https://maven.zohodl.com/com/zoho/crm/zohocrm-java-sdk-8-0/5.0.0/zohocrm-java-sdk-8-0-5.0.0.jar)
 
-For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/releases/tag/4.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
+For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/releases/tag/5.0.0) using Maven, include the following in your **pom.xml** file, which will get created once your **Java** project is created using Maven.
 
     ```xml
     <repositories>
@@ -96,7 +99,7 @@ For including the latest [version](https://github.com/zoho/zohocrm-java-sdk-8.0/
         <dependency>
             <groupId>com.zoho.crm</groupId>
             <artifactId>zohocrm-java-sdk-8-0</artifactId>
-            <version>4.0.0</version>
+            <version>5.0.0</version>
         </dependency>
     </dependencies>
     ```
@@ -116,4 +119,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/4.0.0/README.md).
+For more details, kindly refer [here](/versions/5.0.0/README.md).
